@@ -1,3 +1,4 @@
+{% if portal.user.email != "thajudeen.shaheen@freshworks.com" and portal.user.email != "" %}
 <header class="container-fluid px-0 fw-nav-wrapper fixed-top">
   <section class="bg-light container-fluid">
     <div class="container">
@@ -10,7 +11,6 @@
       {% endelement %}
     </div>
   </section>
-
   {% if  portal.current_page != "csat_survey" %}
     <section class="container">
       <nav class="navbar navbar-expand-xl navbar-light px-0 py-8 pt-xl-4 pb-xl-0">
@@ -22,7 +22,6 @@
          }
         {% endelement %}
         {% element 'hamburger' %}{}{% endelement %}
-
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto mt-64 mt-xl-0">
             {% for tab in portal.tabs %}
@@ -59,3 +58,4 @@
     </section>
   {% endif %}
 </header>
+{% endif %}
